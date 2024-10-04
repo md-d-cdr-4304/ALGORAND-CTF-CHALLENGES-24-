@@ -12,11 +12,12 @@ import { my_mnemonic as mnemonic } from "../config";
 
   const assetId = 720485937;
 
+  // Create an asset transfer transaction (opt-in with 0 amount)
   const payTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
-    from : account.addr,
-    to : account.addr,
+    sender: account.addr,
+    receiver: account.addr, 
     assetIndex: assetId,
-    amount: 0,
+    amount: 0, 
     suggestedParams: await algodClient.getTransactionParams().do(),
   });
 

@@ -1,4 +1,4 @@
-// This is the python code to opt the following NFT 
+// This is the python code to opt-in the following NFT 
 trans_params = algod_client.suggested_params()
 
 asset_opt_in_tx = AssetOptInTxn(
